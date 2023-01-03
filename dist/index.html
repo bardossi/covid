@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="bundle.js"></script>
+    <title>Covid-19 Tracker</title>
+</head>
+
+<body>
+    <div class="header">
+        <h2>Covid-19 alkalmazás</h2>
+    </div>
+    <div class="search">
+        <div class="form-container">
+            <form action="" id="form">
+                <select required name="countries" id="country-input" class="form-item">
+                    <option disabled selected value>Válasszon egy országot!</option>
+                    <option value="Hungary">Hungary</option>
+                    <option value="France">France</option>
+                    <option value="Slovakia">Slovakia</option>
+                    <option value="Slovenia">Slovenia</option>
+                    <option value="Austria">Austria</option>
+                    <option value="Romania">Romania</option>
+                </select>
+                <div class="horizontal-spacer"></div>
+                <div id="search" class="form-item">
+                    <button type="reset">X</button>
+                    <button type="submit" id="submit-btn">Adatok lekérdezése</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="error-message" id="error-message" style="display: none">
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+        <strong>Adatbetöltési hiba!</strong> Ellenőrizze az internet kapcsolatot és próbálja meg újra!
+    </div>
+
+    <div class="content">
+        <div class="card-container" id="card-container"></div>
+        <div class="chart-container" id="chart-container"></div>
+    </div>
+</body>
+
+</html>
